@@ -18,18 +18,12 @@ The following types of WAV files are handled:
 
 Usage:
 
-  require_once("clsWAV.php"); 
-  
-  $wav = new \phpaudio\WAV('/path to your wave file.wav');
-  
-  if ($wav->getError() != null && $wav->getError() != "") 
-  
-    echo($wav->getError() . "\n"); 
-    
-  else 
-  
-    var_dump($wav->getHeaderData()); 
-    
+    require_once("clsWAV.php");
+    $wav = new \phpaudio\WAV('/path your wav file.wav');
+    if ($wav->getError() != null && $wav->getError() != "")
+	   echo($wav->getError() . "\n");
+    else 
+        var_dump($wav->getHeaderData());
     
     
   The WaveHeader class gets filled up with all the information about the WAV file. Among other things, it provides information about:
